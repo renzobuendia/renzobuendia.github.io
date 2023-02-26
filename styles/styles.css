@@ -1,0 +1,110 @@
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --text-input-filled: #F9F7F7;
+    --light-blue: #DBE2EF;
+    --blue: #3F72AF;
+    --dark-blue: #112D4E;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-right, .navbar-left{
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+}
+.navbar-left img{
+    height: 32px;
+    width: 32px;
+    display: none;
+}
+.navbar-left .logo{
+    color: var(--dark-blue);
+    font-size: var(--lg);
+    font-weight: bold;
+    margin-left: 16px;
+}
+.navbar-right ul{
+    list-style: none;
+    display: flex;
+}
+.navbar-right ul li{
+    margin: 0 12px;
+    border: 2px solid var(--white);
+    padding: 8px;
+}
+.navbar-right ul li:hover{
+    border: 2px solid var(--light-blue);
+    padding: 8px;
+    border-radius: 8px;
+}
+.navbar-right ul .active-tab{
+    border: 2px solid var(--light-blue);
+    padding: 8px;
+    border-radius: 8px;
+}
+.navbar-right ul li a{
+    text-decoration: none;
+    color: var(--blue);
+}
+.primary-button{
+    background: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    margin: 16px;
+    width: 120px;
+    height: 40px;
+    font-size: var(--md);
+    border-radius: 8px;
+    font-weight: bold;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+}
+header p{
+    margin: 0;
+}
+header img {
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+}
+header .title{
+    color: var(--dark-blue);
+    font-size: 7vw;
+    font-weight: bold;
+    margin: 12px;
+}
+header .sub-title{
+    color: var(--light-blue);
+    font-size: 4vw;
+}
+@media(max-width: 640px){
+    .navbar-left img{
+        display: block;
+    }   
+    .navbar-right{
+        display: none;
+    }
+    header{
+        padding: 24px;
+    }
+    header img{
+        height: 140px;
+        width: 140px;
+    }
+}
