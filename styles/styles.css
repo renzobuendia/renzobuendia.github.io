@@ -22,7 +22,6 @@ nav{
 .navbar-right, .navbar-left{
     display: flex;
     align-items: center;
-    margin: 0 24px;
 }
 .navbar-left img{
     height: 32px;
@@ -38,15 +37,16 @@ nav{
 .navbar-right ul{
     list-style: none;
     display: flex;
+    padding: 0;
 }
 .navbar-right ul li{
-    margin: 0 12px;
+    margin: 0 8px;
     border: 2px solid var(--white);
     padding: 8px;
+    box-sizing: border-box;
 }
 .navbar-right ul li:hover{
     border: 2px solid var(--light-blue);
-    padding: 8px;
     border-radius: 8px;
 }
 .navbar-right ul .active-tab{
@@ -62,11 +62,12 @@ nav{
     background: var(--blue);
     color: var(--white);
     cursor: pointer;
-    margin: 16px;
+    margin: 0 16px;
     width: 120px;
     height: 40px;
     font-size: var(--md);
     border-radius: 8px;
+    border: 2px solid var(--light-blue);
     font-weight: bold;
 }
 header{
@@ -92,6 +93,25 @@ header .title{
 header .sub-title{
     color: var(--light-blue);
     font-size: 4vw;
+}
+header .habilities{
+    width: 60%;
+}
+header .habilities ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+}
+header .habilities ul li{
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    margin: 8px;
+    padding: 8px;
+    color: var(--dark-blue);
+    font-size: 2.5vw;
 }
 @media(max-width: 640px){
     .navbar-left img{
